@@ -18,12 +18,21 @@ namespace triangleDraw
         }
         Graphics g;
         Polygon triangle = new Polygon();
+        Rectangle rect = new Rectangle();
         private void button1_Click(object sender, EventArgs e)
         {
             g = CreateGraphics();
             g.Clear(Color.White);
             triangle.generate();
             triangle.draw(g);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            g = CreateGraphics();
+            g.Clear(Color.White);
+            rect.generate();
+            rect.draw(g);
         }
     }
 }

@@ -2,48 +2,48 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace triangleDraw
 {
-    public partial class Polygon
+    class Rectangle
     {
-        public PointF[] points { get; private set; } = new PointF[3];
+        private int x;
+        private int y;
+        private int height;
+        private int width;
         public dynamic[] colors = new dynamic[4];
         public dynamic brush;
-        public static int width = 10;
-        public Pen pen = new Pen(Color.Black, width);
-        
-        
-        public Polygon()
+
+        public Rectangle()
         {
             this.colors[0] = Brushes.Black;
             this.colors[1] = Brushes.Red;
             this.colors[2] = Brushes.Green;
             this.colors[3] = Brushes.Blue;
         }
-        
         public void generate()
         {
             Random rand = new Random();
             this.brush = colors[rand.Next(0, 4)];
-            for (int i = 0; i < 3; i++)
+            this.x = rand.Next(100, 800);
+            this.y = rand.Next(200, 400);
+            this.height = rand.Next(10, 200);
+            if (this.x + this.height > 800)
             {
-                this.points[i] = new PointF((float)rand.Next(200, 800), (float)rand.Next(200, 400));
+                this.x -= this.height;
+
             }
-            
+            this.width = rand.Next(10, 200);
+            if (this.y + this.width > 400)
+            {
+                this.y -= this.width;
+            }
         }
-        
         public void draw(Graphics g)
         {
-
-            g.FillPolygon(brush, this.points);
-        }
-        public void draw(Graphics g,PointF[] points)
-        {
-            g.FillPolygon(brush,points);
+            g.FillRectangle(this.brush, this.x, this.y, this.height, this.width);
         }
     }
 }
