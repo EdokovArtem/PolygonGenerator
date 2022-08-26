@@ -42,5 +42,11 @@ namespace triangleDraw
             g.Clear(Color.White);
             lot.start(g);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            g = CreateGraphics();
+            g.Clear(Color.White);
+        }
     }
 }
