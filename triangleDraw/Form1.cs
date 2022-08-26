@@ -19,6 +19,7 @@ namespace triangleDraw
         Graphics g;
         Polygon triangle = new Polygon();
         Rectangle rect = new Rectangle();
+        Lotery lot = new Lotery();
         private void button1_Click(object sender, EventArgs e)
         {
             g = CreateGraphics();
@@ -33,6 +34,13 @@ namespace triangleDraw
             g.Clear(Color.White);
             rect.generate();
             rect.draw(g);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            g = CreateGraphics();
+            g.Clear(Color.White);
+            lot.start(g);
         }
     }
 }

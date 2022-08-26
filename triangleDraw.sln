@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "triangleDraw", "triangleDraw\triangleDraw.csproj", "{1EA6F13D-23F0-42F4-BFCF-946B06D4189E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drawing", "triangleDraw\Drawing.csproj", "{1EA6F13D-23F0-42F4-BFCF-946B06D4189E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
